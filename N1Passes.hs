@@ -31,7 +31,10 @@ uniquifyExp (Negate exp) state =
 
 -- TODO: Implement these three cases
 uniquifyExp (Add x y) state = undefined
-uniquifyExp (Var sym) state = undefined
+uniquifyExp (Var sym) (UState env count) =
+  case Env.lookup sym env of
+    Right newName -> CState (UState env count) $ Right $ Var newName
+    Left msg -> CState (UState env count) $ Left msg
 uniquifyExp (Let sym exp body) state = undefined
 
 -- ============================================
