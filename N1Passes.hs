@@ -30,12 +30,29 @@ uniquifyExp (Negate exp) state =
     err -> err
 
 -- TODO: Implement these three cases
-uniquifyExp (Add x y) state = undefined
+uniquifyExp (Add x y) state =
+  case uniquifyExp x state of
+    CState state' (Right x') ->
+      case uniquifyExp y state' of
+        CState state'' (Right y') -> CState state'' $ Right $ Add x' y'
+        err -> err
+    err -> err
 uniquifyExp (Var sym) (UState env count) =
   case Env.lookup sym env of
     Right newName -> CState (UState env count) $ Right $ Var newName
     Left msg -> CState (UState env count) $ Left msg
-uniquifyExp (Let sym exp body) state = undefined
+uniquifyExp (Let sym exp body) state@(UState env count) =
+  let newName = sym ++ show count
+      newEnv = Env.extendEnv sym newName env
+      state' = UState newEnv (count + 1)
+  in case uniquifyExp exp state' of
+    CState state'' (Right exp') ->
+      case uniquifyExp body state'' of
+        CState state''' (Right body') -> CState state''' $ Right $ Let newName exp' body'
+        err -> err
+    err -> err
+
+
 
 -- ============================================
 -- REMOVE COMPLEX OPERA* PASS
