@@ -29,7 +29,7 @@ uniquifyExp (Negate exp) state =
     CState state' (Right res) -> CState state' $ Right $ Negate res
     err -> err
 
--- TODO: Implement these three cases
+-- DONE
 uniquifyExp (Add x y) state =
   case uniquifyExp x state of
     CState state' (Right x') ->
