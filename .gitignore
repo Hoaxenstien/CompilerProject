@@ -1,0 +1,4 @@
+echo "*.hi" >> .gitignore
+echo "*.o" >> .gitignore
+echo "*.exe" >> .gitignore
+echo ".stack-work/" >> .gitignore

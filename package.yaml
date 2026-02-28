@@ -1,0 +1,46 @@
+name:                comp3352-m1-wilson-caldwell
+version:             0.1.0.0
+github:              "Teddy.Wilson/comp3352-m1-wilson-caldwell"
+license:             BSD3
+author:              "Wilson Caldwell"
+maintainer:          "your.email@example.com"
+
+dependencies:
+- base >= 4.7 && < 5
+- megaparsec >= 7.0
+- mtl
+- text
+- parser-combinators
+
+library:
+  source-dirs: .
+  exposed-modules:
+    - N1
+    - Env
+    - CompilerPasses
+    - N1Passes
+    - NiParser
+    - CParser
+
+executables:
+  comp3352-m1-wilson-caldwell-exe:
+    main:                Main.hs
+    source-dirs:         .
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - comp3352-m1-wilson-caldwell
+
+tests:
+  comp3352-m1-wilson-caldwell-test:
+    main:                N1PassesSpec.hs
+    source-dirs:         .
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - comp3352-m1-wilson-caldwell
+    - hspec
