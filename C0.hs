@@ -10,6 +10,9 @@ import Data.Int (Int64)
 data Program = Program [(String, Tail)]
   deriving (Eq, Show)
 
+-- Type alias so parser can use C0
+type C0 = Program
+
 -- Atoms are simple values (no operations)
 data Atom 
   = Int Int64
@@ -22,6 +25,7 @@ data Exp
   | Read
   | Negate Atom
   | Add Atom Atom
+  | Sub Atom  -- Added for parser support
   deriving (Eq, Show)
 
 -- Statements are assignments
