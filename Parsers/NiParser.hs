@@ -11,7 +11,7 @@ import qualified Text.Megaparsec.Char.Lexer as L
 import Control.Monad.Combinators.Expr
 import Data.Void
 import Data.Text as T
-import Data.Text.IO as TIO
+import qualified Data.Text.IO as TIO
 -- for setting up debugging
 --import Text.Megaparsec.Debug
 

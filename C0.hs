@@ -2,10 +2,6 @@ module C0 where
 
 import Data.Int (Int64)
 
--- C0 Language Definition
--- This is the intermediate representation after explicate control
--- Programs consist of labeled blocks that contain sequences of statements
-
 -- A C0 program is a collection of labeled basic blocks
 data Program = Program [(String, Tail)]
   deriving (Eq, Show)
@@ -20,12 +16,12 @@ data Atom
   deriving (Eq, Show)
 
 -- Expressions can be atoms or operations
+-- IMPORTANT: No Negate constructor! Only Sub for unary minus.
 data Exp
   = Atm Atom
   | Read
-  | Negate Atom
+  | Sub Atom        -- Unary minus (renamed from Negate to avoid conflict)
   | Add Atom Atom
-  | Sub Atom  -- Added for parser support
   deriving (Eq, Show)
 
 -- Statements are assignments
@@ -34,7 +30,6 @@ data Stmt
   deriving (Eq, Show)
 
 -- Tails represent the end of a basic block
--- Either return a value or continue with more statements
 data Tail
   = Return Exp
   | Seq Stmt Tail

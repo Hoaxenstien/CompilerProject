@@ -1,0 +1,91 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.39.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           comp3352-m1-wilson-caldwell
+version:        0.1.0.0
+homepage:       https://github.com/Teddy.Wilson/comp3352-m1-wilson-caldwell#readme
+bug-reports:    https://github.com/Teddy.Wilson/comp3352-m1-wilson-caldwell/issues
+author:         Wilson Caldwell
+maintainer:     your.email@example.com
+license:        BSD3
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/Teddy.Wilson/comp3352-m1-wilson-caldwell
+
+library
+  exposed-modules:
+      N1
+      Env
+      CompilerPasses
+      N1Passes
+      C0Passes
+      X86bPasses
+      X86b
+      Parsers.NiParser
+      Parsers.CParser
+      C0
+  other-modules:
+      Paths_comp3352_m1_wilson_caldwell
+  hs-source-dirs:
+      ./
+  build-depends:
+      base >=4.7 && <5
+    , hashable
+    , megaparsec >=7.0
+    , mtl
+    , parser-combinators
+    , text
+  default-language: Haskell2010
+
+executable comp3352-m1-wilson-caldwell-exe
+  main-is: Main.hs
+  other-modules:
+      C0
+      C0Passes
+      CompilerPasses
+      Env
+      N1
+      N1Passes
+      Parsers.CParser
+      Parsers.NiParser
+      X86b
+      X86bPasses
+      Paths_comp3352_m1_wilson_caldwell
+  hs-source-dirs:
+      ./
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , comp3352-m1-wilson-caldwell
+    , hashable
+    , megaparsec >=7.0
+    , mtl
+    , parser-combinators
+    , text
+  default-language: Haskell2010
+
+test-suite comp3352-m1-wilson-caldwell-test
+  type: exitcode-stdio-1.0
+  main-is: N1PassesSpec.hs
+  other-modules:
+      C0PassesSpec
+      X86bPassesSpec
+      Paths_comp3352_m1_wilson_caldwell
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , comp3352-m1-wilson-caldwell
+    , hashable
+    , hspec
+    , megaparsec >=7.0
+    , mtl
+    , parser-combinators
+    , text
+  default-language: Haskell2010

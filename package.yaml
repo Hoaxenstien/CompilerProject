@@ -11,6 +11,8 @@ dependencies:
 - mtl
 - text
 - parser-combinators
+- hashable           
+
 
 library:
   source-dirs: .
@@ -19,8 +21,14 @@ library:
     - Env
     - CompilerPasses
     - N1Passes
-    - NiParser
-    - CParser
+    - C0Passes
+    - X86bPasses
+    - X86b
+    - Parsers.NiParser
+    - Parsers.CParser
+    - C0
+  other-modules:
+    - Paths_comp3352_m1_wilson_caldwell
 
 executables:
   comp3352-m1-wilson-caldwell-exe:
@@ -36,7 +44,7 @@ executables:
 tests:
   comp3352-m1-wilson-caldwell-test:
     main:                N1PassesSpec.hs
-    source-dirs:         .
+    source-dirs:         test
     ghc-options:
     - -threaded
     - -rtsopts
