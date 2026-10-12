@@ -1,0 +1,30 @@
+? C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\.stack-work\dist\effaccc7\build\comp3352-m1-wilson-caldwell-exe\autogen\Paths_comp3352_m1_wilson_caldwell.hs
+: hash: fd4768dd0ab15b066d5d4e3511944c36ee5f4696e73dbc03c80799b8da976770
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\C0.hs:
+  hash: 72b2ec9dbb31a9939238ca5e97e20f17bc87a996f4ca3aa501137df44c28c50e
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\C0Passes.hs:
+  hash: ae9442a51be697255bedae80b0a356217c6a0189e394f1f964e291991df94390
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\CompilerPasses.hs:
+  hash: db9ca792044437208ff44ce6a3ea8831f96d67b1b842aec5b4c8b37841ddfe88
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\Env.hs:
+  hash: bbc4e4c49c1c045fc71efff1fa2a2e34c777e8ea3f9aa917778fd8e481d43528
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\Main.hs:
+  hash: 9defb520ba5de4acf921205592e88fc4c31e62cdc4dc6e0811a4fdcd61393472
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\N1.hs:
+  hash: af9330b43fa1f438958787b89b85f9aa1de4b6b5218cd9521b243c3204945cfc
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\N1Passes.hs:
+  hash: c40dff92ad8e08f2fb1683a16d8eee2b358666f6f0dc8e609103fd2964035559
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\Parsers\CParser.hs:
+  hash: 5d819b3bc236412b54bca1d282c0d64d57d485d1874b1228fb02be9e0f640b38
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\Parsers\NiParser.hs:
+  hash: 0a64fa430980d8c0b1ad069671a3fbc6114ebd3c967570562fb6e8b48c890afc
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\X86b.hs:
+  hash: 7fd3835cb21acdcc63faf3641a3b2f0c1eb2858afb9013f03022be23dec849f9
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\X86bPasses.hs:
+  hash: df3a9fbf0a7ed1aec59a75ca9a7b2ee800b7dc89597b0a752a08d9ff24b850d9
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\X86bPasses\Liveness.hs:
+  hash: b2c3240ce37fa1814b07b5a1c38b61fdc21237de06216ff695f276d11c8db2bf
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\comp3352-m1-wilson-caldwell.cabal:
+  hash: 1c7e0375c21d2f0ee0617983fad7f6e25f5a4d1c497b0abcc2eba59ee94b8824
+C:\Users\James\Downloads\comp3352-m2-wilson-caldwell\comp3352-m1-wilson-caldwell\package.yaml:
+  hash: f19d78b4ed1ae6a8c3cc25d3638f4d8a9bc3b30a4c000a683e49bb054b7e5bb5

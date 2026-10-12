@@ -25,6 +25,7 @@ library
       N1Passes
       C0Passes
       X86bPasses
+      X86bPasses.Liveness
       X86b
       Parsers.NiParser
       Parsers.CParser
@@ -35,6 +36,7 @@ library
       ./
   build-depends:
       base >=4.7 && <5
+    , containers
     , hashable
     , megaparsec >=7.0
     , mtl
@@ -51,8 +53,6 @@ executable comp3352-m1-wilson-caldwell-exe
       Env
       N1
       N1Passes
-      Parsers.CParser
-      Parsers.NiParser
       X86b
       X86bPasses
       Paths_comp3352_m1_wilson_caldwell
@@ -62,6 +62,7 @@ executable comp3352-m1-wilson-caldwell-exe
   build-depends:
       base >=4.7 && <5
     , comp3352-m1-wilson-caldwell
+    , containers
     , hashable
     , megaparsec >=7.0
     , mtl
@@ -75,13 +76,14 @@ test-suite comp3352-m1-wilson-caldwell-test
   other-modules:
       C0PassesSpec
       X86bPassesSpec
-      Paths_comp3352_m1_wilson_caldwell
+      X86bPasses.LivenessSpec
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , comp3352-m1-wilson-caldwell
+    , containers
     , hashable
     , hspec
     , megaparsec >=7.0
